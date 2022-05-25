@@ -10,10 +10,10 @@ for(;i>=0;i--){
 console.log(numbers_square); */
 
 //Square numbers - Map Method
-var numbers_square = numbers.map(function(number){
+/* var numbers_square = numbers.map(function(number){
     return Math.pow(number,2);
 });
-console.log(numbers_square);
+console.log(numbers_square); */
 
 //Square numbers - Filter Method
 // Not found becouse filter return de same items in principal array
@@ -21,3 +21,9 @@ console.log(numbers_square);
     return 1;
 });
 console.log(numbers_square); */
+
+//Square numbers - forEach Method
+/* numbers.forEach(function(number,index,originalArray){
+    originalArray[index] = Math.pow(number,2);
+});
+console.log(numbers); */
