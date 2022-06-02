@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get and Set</title>
+</head>
+<body>
+    <script>
+        // Don't work with Class
+/*         function Teacher(firstName, lastName){
+            this.firstName = firstName;
+            this.sayHello = function(){
+                console.log("Hello, my name is "+this.firstName);
+            }
+            if(typeof lastName !== "undefined"){
+                this.fullName = firstName+" "+lastName;
+            }
+            
+            get firstName(){
+                return this.firstName.toUpperCase();
+            }
+        } 
+        var julian = new Teacher("Julian", "Delgado");
+        
+        */
+
+        var Teacher = {
+            firstName : "Julian",
+            sayHello : function(){
+                console.log("Hello, my name is "+this.firstName);
+            },
+            get getFirstName(){
+                console.log("Get Ok");
+                return this.firstName.toUpperCase();
+            },
+            set setFirstName(firstName){
+                if(firstName == "" || (typeof firstName === "undefined")){
+                    console.log("Error: Invalid Name");
+                    return -1;
+                }
+                console.log("Set Ok");
+                this.firstName = firstName;
+            }
+        }
+
+        Teacher.setFirstName = "Carlos";
+        console.log(Teacher.getFirstName);
+        
+    </script>
+</body>
+</html>
